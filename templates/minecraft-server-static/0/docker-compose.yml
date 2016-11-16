@@ -1,8 +1,7 @@
 Minecraft-Static:
   environment:
     EULA: 'true'
-    MOTD: ${SERVER_ID}
-    SERVER_IP: ${SERVER_IP}
+    MOTD: ${SERVER_ID}:${SERVER_IP}:${SERVER_PORT}
     SERVER_PORT: ${SERVER_PORT}
     TYPE: SPIGOT
     CONSOLE: 'false'
