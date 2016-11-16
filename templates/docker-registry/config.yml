@@ -1,0 +1,6 @@
+name: "Docker Registry"
+description: |
+  Docker Registry
+version: v1.0
+category: Docker
+maintainer: PCXD <pcxd@live.com>

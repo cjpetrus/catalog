@@ -1,0 +1,6 @@
+name: "PHP Web Server"
+description: |
+  PHP Web Server
+version: v1.0
+category: Web
+maintainer: PCXD <pcxd@live.com>

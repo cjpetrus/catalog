@@ -1,0 +1,56 @@
+.catalog:
+  name: "Minecraft Server"
+  version: "v1.0"
+  description: "Minecraft server"
+  uuid: minecraft-server-0
+  questions:
+    - variable: "SERVER_PORT"
+      label: "Port number"
+      description: "On which port should the server listen?"
+      default: 25565
+      required: true
+      type: "int"
+    - variable: "VERSION"
+      label: "Minecraft Version"
+      description: "Select the version of Minecraft server to run.  Default is the latest available"
+      required: false
+      type: "enum"
+      default: LATEST
+      options:
+        - LATEST
+        - SNAPSHOT
+        - 1.10.2
+        - 1.10
+        - 1.9.4
+        - 1.9.2
+        - 1.9
+        - 1.8.8
+        - 1.8.3
+        - 1.8
+        - 1.7.10
+        - 1.6.4
+    - variable: "MOTD"
+      label: "Description"
+      description: "Description string for Minecraft server"
+      default: "A Minecraft server"
+      type: "string"
+      required: true
+    - variable: "OPS"
+      label: "Operators"
+      description: "Player names to give operator privileges, comma separated"
+      type: "string"
+    - variable: "SERVER_NAME"
+      label: "Server Name"
+      description: "Name of server (a-z,0-9)"
+      default: "lobby"
+      type: "string"
+      required: true
+    - variable: "RAM_OPTS"
+      label: "Ram options"
+      description: "Java ram options"
+      default: "-Xmx2048M -Xms1024M"
+      type: "string"
+      required: true
+Minecraft:
+  scale: 1
+

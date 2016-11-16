@@ -1,0 +1,14 @@
+.catalog:
+  name: "PHP Web Server"
+  version: "v1.0"
+  description: "PHP Web Server"
+  uuid: php-web-0
+  questions:
+    - variable: "DOMAIN"
+      label: "Domain name"
+      description: "Your domain name"
+      default: "abc.com"
+      type: "string"
+      required: true
+php-web:
+  scale: 1

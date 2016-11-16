@@ -1,0 +1,24 @@
+Minecraft:
+  environment:
+    EULA: 'true'
+    VERSION: ${VERSION}
+    OPS: ${OPS}
+    MOTD: ${MOTD}
+    SERVER_NAME: ${SERVER_NAME}
+    SERVER_PORT: ${SERVER_PORT}
+    TYPE: SPIGOT
+    ENABLE_RCON: 'true'
+    ENABLE_QUERY: 'true'
+    CONSOLE: 'false'
+    RAM_OPTS: ${RAM_OPTS}
+  tty: false
+  image: pcxd/minecraft-server
+  stdin_open: false
+  volumes:
+  - /home/data/minecraft/${SERVER_NAME}:/data
+  ports:
+  - ${SERVER_PORT}:${SERVER_PORT}/udp
+  - ${SERVER_PORT}:${SERVER_PORT}/tcp
+  labels:
+    io.rancher.container.pull_image: always
+

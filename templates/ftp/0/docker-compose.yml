@@ -1,0 +1,24 @@
+FTP:
+  ports:
+  - 21:21/tcp
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  command:
+  - /usr/sbin/pure-ftpd
+  - -c
+  - '30'
+  - -C
+  - '5'
+  - -l
+  - puredb:/etc/pure-ftpd/pureftpd.pdb
+  - -E
+  - -j
+  - -R
+  - --trustedgid 
+  - '2'
+  image: stilliard/pure-ftpd:hardened
+  volumes:
+  - /home/data:/home/data
+  - /home/data/config/ftp:/etc/pure-ftpd
+  stdin_open: true

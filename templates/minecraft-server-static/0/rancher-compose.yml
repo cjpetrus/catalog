@@ -1,0 +1,39 @@
+.catalog:
+  name: "Minecraft Server Static"
+  version: "v1.0"
+  description: "Minecraft server Static"
+  uuid: minecraft-server-static-0
+  questions:
+    - variable: "SERVER_PORT"
+      label: "Port number"
+      description: "On which port should the server listen?"
+      default: 25565
+      required: true
+      type: "int"
+    - variable: "MOTD"
+      label: "Description"
+      description: "Description string for Minecraft server"
+      default: "A Minecraft server"
+      type: "string"
+      required: true
+    - variable: "SERVER_NAME"
+      label: "Server Name"
+      description: "Name of server (a-z,0-9)"
+      default: "lobby0"
+      type: "string"
+      required: true
+    - variable: "IMAGE_TAG"
+      label: "Image tag"
+      description: "Image tag"
+      default: "lobby"
+      type: "string"
+      required: true
+    - variable: "RAM_OPTS"
+      label: "Ram options"
+      description: "Java ram options"
+      default: "-Xmx2048M -Xms1024M"
+      type: "string"
+      required: true
+Minecraft-Static:
+  scale: 1
+

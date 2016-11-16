@@ -1,0 +1,18 @@
+MariaDB:
+  environment:
+    MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  tty: true
+  image: mariadb
+  stdin_open: true
+  volumes:
+  - /home/data/mysql:/var/lib/mysql
+phpMyAdmin:
+  labels:
+    io.rancher.container.pull_image: always
+  ports:
+  - ${ADMIN_PORT}:80/tcp
+  external_links:
+  - MariaDB:db
+  tty: true
+  image: phpmyadmin/phpmyadmin
+  stdin_open: true

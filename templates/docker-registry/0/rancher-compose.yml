@@ -1,0 +1,8 @@
+.catalog:
+  name: "Docker Registry"
+  version: "v1.0"
+  description: "Docker Registry"
+  uuid: docker-registry-0
+  questions:
+Registry:
+  scale: 1

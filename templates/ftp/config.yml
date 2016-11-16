@@ -1,0 +1,6 @@
+name: FTP
+description: |
+  File Server
+version: v1.0
+category: Utility
+maintainer: PCXD <pcxd@live.com>

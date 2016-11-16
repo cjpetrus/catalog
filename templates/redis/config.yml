@@ -1,0 +1,6 @@
+name: Redis
+description: |
+  KV Store
+version: v1.0
+category: Database
+maintainer: PCXD <pcxd@live.com>

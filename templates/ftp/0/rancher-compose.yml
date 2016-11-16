@@ -1,0 +1,8 @@
+.catalog:
+  name: "FTP"
+  version: "v1.0"
+  description: "File Server"
+  uuid: ftp-0
+  questions:
+FTP:
+  scale: 1

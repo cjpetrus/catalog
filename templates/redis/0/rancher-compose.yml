@@ -1,0 +1,22 @@
+.catalog:
+  name: "Redis"
+  version: "v1.0"
+  description: "KV Store"
+  uuid: redis-0
+  questions:
+    - variable: "ADMIN_PASS"
+      label: "Admin password"
+      description: "Admin password"
+      default: ""
+      type: "string"
+      required: true
+    - variable: "ADMIN_PORT"
+      label: "phpRedisAdmin Port number"
+      description: "On which port should the server listen?"
+      default: 8081
+      required: true
+      type: "int"
+Redis:
+  scale: 1
+phpRedisAdmin:
+  scale: 1

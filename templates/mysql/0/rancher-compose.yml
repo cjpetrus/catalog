@@ -1,0 +1,22 @@
+.catalog:
+  name: "MySQL"
+  version: "v1.0"
+  description: "Relational Database"
+  uuid: mysql-0
+  questions:
+    - variable: "MYSQL_ROOT_PASSWORD"
+      label: "MySQL root password"
+      description: "MySQL root password"
+      default: ""
+      type: "string"
+      required: true
+    - variable: "ADMIN_PORT"
+      label: "phpMyAdmin Port number"
+      description: "On which port should the server listen?"
+      default: 8082
+      required: true
+      type: "int"
+MariaDB:
+  scale: 1
+phpMyAdmin:
+  scale: 1

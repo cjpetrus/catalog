@@ -1,0 +1,10 @@
+php-web:
+  environment:
+    ALLOW_OVERRIDE: 'true'
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: pcxd/apache-php
+  volumes:
+  - /home/data/php/${DOMAIN}:/app
+  stdin_open: true

@@ -1,0 +1,14 @@
+.catalog:
+  name: "Rundeck"
+  version: "v1.0"
+  description: "Job Scheduler"
+  uuid: rundeck-0
+  questions:
+    - variable: "RUNDECK_PASSWORD"
+      label: "Rundeck Password"
+      description: "Rundeck Password"
+      default: ""
+      type: "string"
+      required: true
+Rundeck:
+  scale: 1

@@ -1,0 +1,19 @@
+Rundeck:
+  ports:
+  - 4440:4440/tcp
+  environment:
+    SERVER_URL: http://104.199.163.160:4440
+    RUNDECK_PASSWORD: ${RUNDECK_PASSWORD}
+    RUNDECK_UID: '0'
+    RUNDECK_GID: '0'
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: pcxd/rundeck
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+  - /home/data/rundeck/etc/rundeck:/etc/rundeck
+  - /home/data/rundeck/var/rundeck:/var/rundeck
+  - /home/data/rundeck/var/lib/mysql:/var/lib/mysql
+  - /home/data:/home/data
+  stdin_open: true

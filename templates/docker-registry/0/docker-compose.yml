@@ -1,0 +1,18 @@
+Registry:
+  ports:
+  - 5000:5000/tcp
+  environment:
+    REGISTRY_AUTH: htpasswd
+    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+    REGISTRY_HTTP_TLS_CERTIFICATE: /certs/cert_chain.pem
+    REGISTRY_HTTP_TLS_KEY: /certs/cert.key
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: registry:2
+  volumes:
+  - /home/data/docker-registry:/var/lib/registry
+  - /home/data/config/docker-registry/auth:/auth
+  - /home/data/config/docker-registry/certs:/certs
+  stdin_open: true
