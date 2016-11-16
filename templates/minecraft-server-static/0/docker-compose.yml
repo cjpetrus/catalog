@@ -10,6 +10,8 @@ Minecraft-Static:
   tty: false
   image: pcxd/minecraft-server:${IMAGE_TAG}
   stdin_open: false
+  external_links:
+  - Redis/Redis:redis
   volumes:
   - /home/data/minecraft/${SERVER_NAME}:/data
   ports:
