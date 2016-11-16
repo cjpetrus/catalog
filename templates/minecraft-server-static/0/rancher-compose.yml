@@ -25,7 +25,7 @@
     - variable: "IMAGE_TAG"
       label: "Image tag"
       description: "Image tag"
-      default: "lobby"
+      default: "lobby-dev"
       type: "string"
       required: true
     - variable: "RAM_OPTS"
