@@ -3,8 +3,8 @@ Minecraft:
     EULA: 'true'
     VERSION: ${VERSION}
     OPS: ${OPS}
-    MOTD: ${MOTD}
-    SERVER_NAME: ${SERVER_NAME}
+    MOTD: ${SERVER_ID}
+    SERVER_IP: ${SERVER_IP}
     SERVER_PORT: ${SERVER_PORT}
     TYPE: SPIGOT
     ENABLE_RCON: 'true'

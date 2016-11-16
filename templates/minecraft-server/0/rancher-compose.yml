@@ -4,6 +4,12 @@
   description: "Minecraft server"
   uuid: minecraft-server-0
   questions:
+    - variable: "SERVER_IP"
+      label: "Server IP"
+      description: "IP address of server"
+      default: "103.13.28.16"
+      type: "string"
+      required: true
     - variable: "SERVER_PORT"
       label: "Port number"
       description: "On which port should the server listen?"
@@ -29,19 +35,13 @@
         - 1.8
         - 1.7.10
         - 1.6.4
-    - variable: "MOTD"
-      label: "Description"
-      description: "Description string for Minecraft server"
-      default: "A Minecraft server"
-      type: "string"
-      required: true
     - variable: "OPS"
       label: "Operators"
       description: "Player names to give operator privileges, comma separated"
       type: "string"
-    - variable: "SERVER_NAME"
-      label: "Server Name"
-      description: "Name of server (a-z,0-9)"
+    - variable: "SERVER_ID"
+      label: "Server ID"
+      description: "ID of server (a-z,0-9,-)"
       default: "lobby"
       type: "string"
       required: true
