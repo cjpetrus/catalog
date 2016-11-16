@@ -16,7 +16,7 @@ Minecraft:
   external_links:
   - Redis/Redis:redis
   volumes:
-  - /home/data/minecraft/${SERVER_NAME}:/data
+  - /home/data/minecraft/${SERVER_ID}:/data
   ports:
   - ${SERVER_PORT}:${SERVER_PORT}/udp
   - ${SERVER_PORT}:${SERVER_PORT}/tcp

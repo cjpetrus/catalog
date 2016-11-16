@@ -11,8 +11,6 @@ Minecraft-Static:
   stdin_open: false
   external_links:
   - Redis/Redis:redis
-  volumes:
-  - /home/data/minecraft/${SERVER_NAME}:/data
   ports:
   - ${SERVER_PORT}:${SERVER_PORT}/udp
   - ${SERVER_PORT}:${SERVER_PORT}/tcp
