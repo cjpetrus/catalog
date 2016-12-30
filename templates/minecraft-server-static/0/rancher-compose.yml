@@ -22,9 +22,9 @@
       default: "lobby"
       type: "string"
       required: true
-    - variable: "IMAGE_TAG"
-      label: "Image tag"
-      description: "Image tag"
+    - variable: "FOLDER_NAME"
+      label: "Folder name"
+      description: "Folder name"
       default: "lobby-dev"
       type: "string"
       required: true

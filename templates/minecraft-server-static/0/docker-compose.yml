@@ -6,14 +6,21 @@ Minecraft-Static:
     TYPE: SPIGOT
     CONSOLE: 'false'
     RAM_OPTS: ${RAM_OPTS}
+    TZ: Asia/Bangkok
   tty: false
-  image: pcxd/minecraft-server:${IMAGE_TAG}
+  image: pcxd/minecraft-server-static
+  volumes:
+  - /home/data/config/minecraft/ops.json:/data/ops.json:ro
+  - /home/data/minecraft/${FOLDER_NAME}/:/tmp/data/
   stdin_open: false
   external_links:
   - Redis/Redis:redis
+  - MySQL/MariaDB:db
   ports:
   - ${SERVER_PORT}:${SERVER_PORT}/udp
   - ${SERVER_PORT}:${SERVER_PORT}/tcp
+  net: host
   labels:
     io.rancher.container.pull_image: always
+    io.rancher.container.dns: 'true'
 
