@@ -10,7 +10,7 @@ Minecraft-Static:
   tty: false
   image: pcxd/minecraft-server-static
   volumes:
-  - /home/data/minecraft/${FOLDER_NAME}/:/tmp/data/
+  - /home/data/minecraft/${FOLDER_NAME}:/tmp/data
   stdin_open: false
   external_links:
   - Redis/Redis:redis
