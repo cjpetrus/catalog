@@ -25,7 +25,7 @@
     - variable: "FOLDER_NAME"
       label: "Folder name"
       description: "Folder name"
-      default: "lobby-dev"
+      default: "lobby"
       type: "string"
       required: true
     - variable: "RAM_OPTS"
