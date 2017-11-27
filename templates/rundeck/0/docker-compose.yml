@@ -2,7 +2,7 @@ Rundeck:
   ports:
   - 4440:4440/tcp
   environment:
-    SERVER_URL: http://104.199.163.160:4440
+    SERVER_URL: http://rundeck.cointropy.com:4440
     RUNDECK_PASSWORD: ${RUNDECK_PASSWORD}
     RUNDECK_UID: '0'
     RUNDECK_GID: '0'
